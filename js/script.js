@@ -1,15 +1,19 @@
-// Fade-in on scroll
-const sections = document.querySelectorAll(".card-section");
+// Open panel from Home page button
+function openPage(pageId) {
+  document.getElementById('home').classList.remove('active');
+  document.getElementById('app').classList.add('active');
+  showPanel(pageId);
+}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-}, { threshold: 0.1 });
+// Show panel from sidebar menu
+function showPanel(panelId) {
+  const panels = document.querySelectorAll('.panel');
+  panels.forEach(p => p.classList.remove('active'));
+  document.getElementById(panelId).classList.add('active');
+}
 
-sections.forEach(section => {
-  observer.observe(section);
-});
+// Return to Home page
+function returnHome() {
+  document.getElementById('app').classList.remove('active');
+  document.getElementById('home').classList.add('active');
+}
