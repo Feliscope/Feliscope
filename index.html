@@ -4,159 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feliscope LLC - Translate Big Data to Biological Insights</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 10px 0 0 0;
-      font-size: 1.2rem;
-    }
-    header a {
-      color: #ffdd57;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #1e3a8a;
-      margin-bottom: 20px;
-      text-align: center;
-      font-size: 2rem;
-    }
-    .card-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    }
-    .card ul {
-      padding-left: 20px;
-    }
-    .card li {
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #1e3a8a;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- Navigation -->
+<nav id="navbar">
+  <ul>
+    <li><a href="#biomarker">Biomarker</a></li>
+    <li><a href="#molecular">Molecular Design</a></li>
+    <li><a href="#ai">AI & ML</a></li>
+    <li><a href="#pipeline">Pipeline</a></li>
+    <li><a href="#visualization">Visualization</a></li>
+  </ul>
+</nav>
+
+<!-- Header -->
 <header>
   <h1>Feliscope LLC</h1>
   <p>Translate Big Data to Biological Insights</p>
   <p>Contact: <a href="mailto:yzhang.feliscope@gmail.com">yzhang.feliscope@gmail.com</a></p>
 </header>
 
-<section>
+<!-- Sections -->
+<section id="biomarker">
   <h2>Biomarker Discovery & Mechanism Exploration</h2>
-  <div class="card-container">
-    <div class="card">
-      <ul>
-        <li>Identify disease- and phenotype-associated biomarkers using genomics, transcriptomics, proteomics, and metabolomics</li>
-        <li>Perform GWAS, QTL mapping, fine-mapping, colocalization, eQTL/pQTL integration to reveal Omics interactions</li>
-      </ul>
-    </div>
-  </div>
+  <ul>
+    <li>Identify disease- and phenotype-associated biomarkers using multi-omics.</li>
+    <li>Perform GWAS, QTL mapping, fine-mapping, colocalization, eQTL/pQTL integration.</li>
+  </ul>
 </section>
 
-<section>
+<section id="molecular">
   <h2>Molecular Design & Optimization</h2>
-  <div class="card-container">
-    <div class="card">
-      <ul>
-        <li>Design and optimize antibodies, siRNAs, and ASOs using sequence, structure, and evolutionary approaches</li>
-        <li>Perform molecular docking and interaction simulations with AutoDock Vina, PyMOL, and homology modeling tools</li>
-        <li>Evaluate stability, binding affinity, and off-target effects for rational molecular design</li>
-      </ul>
-    </div>
-  </div>
+  <ul>
+    <li>Design and optimize antibodies, siRNAs, and ASOs.</li>
+    <li>Molecular docking and interaction simulations (AutoDock Vina, PyMOL).</li>
+    <li>Evaluate stability, binding affinity, off-target effects.</li>
+  </ul>
 </section>
 
-<section>
+<section id="ai">
   <h2>AI & Machine Learning Applications</h2>
-  <div class="card-container">
-    <div class="card">
-      <ul>
-        <li>Translate biological questions into AI-compatible formats</li>
-        <li>Develop predictive and classification models using scikit-learn, caret, mlr, PyTorch, TensorFlow, Scanpy</li>
-        <li>Apply model evaluation metrics including AUC, accuracy, and cross-validation for performance assessment</li>
-      </ul>
-    </div>
-  </div>
+  <ul>
+    <li>Translate biological questions into AI-compatible formats.</li>
+    <li>Develop models using scikit-learn, PyTorch, TensorFlow, Scanpy.</li>
+    <li>Model evaluation with AUC, accuracy, and cross-validation.</li>
+  </ul>
 </section>
 
-<section>
+<section id="pipeline">
   <h2>Pipeline Development & Reproducibility</h2>
-  <div class="card-container">
-    <div class="card">
-      <ul>
-        <li>Establish standardized, scalable, and reproducible computational pipelines in HPC and cloud environments (AWS, Docker, Snakemake, Nextflow)</li>
-        <li>Automate workflows for variant calling, RNA-seq/Proteomics processing, single-cell analyses, and multi-omics integration</li>
-      </ul>
-    </div>
-  </div>
+  <ul>
+    <li>Standardized computational pipelines (AWS, Docker, Snakemake, Nextflow).</li>
+    <li>Automate workflows for variant calling, RNA-seq/proteomics, single-cell analysis.</li>
+  </ul>
 </section>
 
-<section>
+<section id="visualization">
   <h2>Publication-Ready Visualization & Reporting</h2>
-  <div class="card-container">
-    <div class="card">
-      <ul>
-        <li>Generate high-quality figures and interactive visualizations using R (ggplot2, Shiny) and Python (matplotlib, seaborn, plotly)</li>
-        <li>Produce formal reports and manuscript-ready outputs including network diagrams, pathway maps, heatmaps, and publication-quality plots</li>
-      </ul>
-    </div>
-  </div>
+  <ul>
+    <li>High-quality figures using R (ggplot2, Shiny) and Python (matplotlib, seaborn, plotly).</li>
+    <li>Produce reports including network diagrams, pathway maps, heatmaps, and plots.</li>
+  </ul>
 </section>
 
 <footer>
   &copy; 2025 Feliscope LLC | Translate Big Data to Biological Insights
 </footer>
 
-<!-- Optional: Google Analytics / Visitor Counter -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
+
+
 

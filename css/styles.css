@@ -1,0 +1,98 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff5f0;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav#navbar {
+  position: sticky;
+  top: 0;
+  background: #e25822;
+  padding: 10px 0;
+  z-index: 100;
+}
+nav#navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav#navbar ul li {
+  margin: 0 15px;
+}
+nav#navbar ul li a {
+  color: #fffacd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav#navbar ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #e25822;
+  color: white;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+header p a {
+  color: #fffacd;
+  text-decoration: none;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+section:nth-child(even) {
+  background: #fff0e0;
+}
+h2 {
+  text-align: center;
+  color: #c1440e;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #e25822;
+  color: white;
+}
+
+/* Simple fade-in animation */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease-out;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
