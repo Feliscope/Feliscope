@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliscope LLC - Computational Biology Services</title>
+  <title>Feliscope LLC - Translate Big Data to Biological Insights</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -27,6 +27,11 @@
       margin: 10px 0 0 0;
       font-size: 1.2rem;
     }
+    header a {
+      color: #ffdd57;
+      text-decoration: none;
+      font-weight: bold;
+    }
     section {
       max-width: 1000px;
       margin: 50px auto;
@@ -40,7 +45,7 @@
     }
     .card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr;
       gap: 30px;
     }
     .card {
@@ -53,11 +58,6 @@
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
     }
     .card ul {
       padding-left: 20px;
@@ -78,14 +78,14 @@
 
 <header>
   <h1>Feliscope LLC</h1>
-  <p>Advanced Computational Biology, AI, and Molecular Design Services</p>
+  <p>Translate Big Data to Biological Insights</p>
+  <p>Contact: <a href="mailto:yzhang.feliscope@gmail.com">yzhang.feliscope@gmail.com</a></p>
 </header>
 
 <section>
   <h2>Biomarker Discovery & Mechanism Exploration</h2>
   <div class="card-container">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091215363-7b1f6ee6591b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2VuZ21pY3N8&ixlib=rb-4.0.3&q=80&w=400" alt="Genomics">
       <ul>
         <li>Identify disease- and phenotype-associated biomarkers using genomics, transcriptomics, proteomics, and metabolomics</li>
         <li>Perform GWAS, QTL mapping, fine-mapping, colocalization, eQTL/pQTL integration to reveal Omics interactions</li>
@@ -98,7 +98,6 @@
   <h2>Molecular Design & Optimization</h2>
   <div class="card-container">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091012184-efbb1b29b9f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Molecular Design">
       <ul>
         <li>Design and optimize antibodies, siRNAs, and ASOs using sequence, structure, and evolutionary approaches</li>
         <li>Perform molecular docking and interaction simulations with AutoDock Vina, PyMOL, and homology modeling tools</li>
@@ -112,7 +111,6 @@
   <h2>AI & Machine Learning Applications</h2>
   <div class="card-container">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091012184-3fbb1b29b9f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="AI & ML">
       <ul>
         <li>Translate biological questions into AI-compatible formats</li>
         <li>Develop predictive and classification models using scikit-learn, caret, mlr, PyTorch, TensorFlow, Scanpy</li>
@@ -126,7 +124,6 @@
   <h2>Pipeline Development & Reproducibility</h2>
   <div class="card-container">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091012184-efbb1b29b9f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Pipeline">
       <ul>
         <li>Establish standardized, scalable, and reproducible computational pipelines in HPC and cloud environments (AWS, Docker, Snakemake, Nextflow)</li>
         <li>Automate workflows for variant calling, RNA-seq/Proteomics processing, single-cell analyses, and multi-omics integration</li>
@@ -139,7 +136,6 @@
   <h2>Publication-Ready Visualization & Reporting</h2>
   <div class="card-container">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091012184-3fbb1b29b9f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Visualization">
       <ul>
         <li>Generate high-quality figures and interactive visualizations using R (ggplot2, Shiny) and Python (matplotlib, seaborn, plotly)</li>
         <li>Produce formal reports and manuscript-ready outputs including network diagrams, pathway maps, heatmaps, and publication-quality plots</li>
@@ -149,8 +145,18 @@
 </section>
 
 <footer>
-  &copy; 2025 Feliscope LLC | Advanced Computational Biology & AI Services
+  &copy; 2025 Feliscope LLC | Translate Big Data to Biological Insights
 </footer>
+
+<!-- Optional: Google Analytics / Visitor Counter -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 
 </body>
 </html>
+
