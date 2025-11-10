@@ -1,0 +1,111 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #fff5f0;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav#navbar {
+  position: sticky;
+  top: 0;
+  background: #e25822;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+nav#navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav#navbar ul li {
+  margin: 0 15px;
+}
+nav#navbar ul li a {
+  color: #fffacd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav#navbar ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #e25822, #ff7f50);
+  color: white;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+header p a {
+  color: #fffacd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+section.card-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  transition: transform 0.6s, opacity 0.6s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+section:nth-child(even) {
+  background: #fff0e0;
+}
+
+h2 {
+  text-align: center;
+  color: #c1440e;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+  background: #fffaf6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+ul {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #e25822;
+  color: white;
+  font-weight: bold;
+}
