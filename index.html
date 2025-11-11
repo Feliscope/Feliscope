@@ -1,131 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliscope LLC</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliscope - Biological Insights</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">Feliscope LLC</div>
-    <div class="tag">Translating Big Data into Biological Insights</div>
-  </div>
-</header>
-
-<!-- HOME PAGE -->
-<div class="page active" id="home">
-  <div class="home-inner">
-    <h1>Welcome to Feliscope</h1>
-    <div class="grid-menu">
-      <div class="menu-item">
-        <div class="menu-icon"><img src="images/about-icon.svg" alt="About Icon"></div>
-        <div class="menu-btn" onclick="openPage('about')">About</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-icon"><img src="images/founder-icon.svg" alt="Founder Icon"></div>
-        <div class="menu-btn" onclick="openPage('founder')">Founder</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-icon"><img src="images/services-icon.svg" alt="Services Icon"></div>
-        <div class="menu-btn" onclick="openPage('services')">Services</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-icon"><img src="images/contact-icon.svg" alt="Contact Icon"></div>
-        <div class="menu-btn" onclick="openPage('contact')">Contact</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- APP PAGES -->
-<div class="app-container" id="app">
-  <!-- Sidebar -->
-  <nav class="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="#" onclick="showPanel('about')">About</a></li>
-      <li><a href="#" onclick="showPanel('founder')">Founder</a></li>
-      <li><a href="#" onclick="showPanel('services')">Services</a></li>
-      <li><a href="#" onclick="showPanel('contact')">Contact</a></li>
-      <li><a href="#" class="return-btn" onclick="returnHome()">Return Home</a></li>
-    </ul>
-  </nav>
-
-  <!-- Content -->
-  <div class="content">
-    <div class="panel" id="about">
-      <h2>About Feliscope</h2>
-      <p>Feliscope is a computational biology and AI consulting company dedicated to translating big data into biological insights. Our team provides end-to-end analytical solutions—from raw data processing to publication-ready reports—helping researchers, biotech startups, and pharmaceutical companies accelerate discovery and innovation.</p>
-    </div>
-
-    <div class="panel" id="founder">
-      <h2>Yuhang Zhang, Ph.D.</h2>
-      <h3>Founder & Principal Scientist</h3>
-      <p>As the Founder and Principal Scientist of Feliscope LLC, I transform complex biological data into actionable insights that drive biomedical innovation. With a Ph.D. in computational cancer immunology and over six years of experience in multi-omics and AI modeling, I integrate genomics, transcriptomics, and proteomics through machine learning frameworks to uncover biomarkers and disease mechanisms.</p>
-      <p>My academic experience at Harvard focused on large-scale clinical cohort analysis, single-cell and spatial omics, and RNA-based therapeutic modeling. Through Feliscope, I deliver scalable bioinformatics solutions that bridge data science and biology.</p>
-    </div>
-
-    <div class="panel" id="services">
-      <h2>Services</h2>
-      <div class="service-grid">
-        <div class="service-card">
-          <h4>Omics Analysis & Functional Interpretation</h4>
-          <ul>
-            <li>Omics preprocessing, DGE, genetic variant calling</li>
-            <li>Pathogenic variant/biomarker identification</li>
-            <li>Genetic regulatory mechanism exploration (GWAS, QTL, MR)</li>
-            <li>Multi-Omics integration</li>
-            <li>Pathway & network analyses</li>
-          </ul>
+    <header id="navbar">
+        <div class="container">
+            <h1 class="logo">Feliscope</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#founder">Founder</a>
+                <a href="#service">Service</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <div class="service-card">
-          <h4>Molecular Design & Optimization</h4>
-          <ul>
-            <li>Design and optimize antibodies, siRNAs, ASOs</li>
-            <li>Molecular docking and interaction simulations</li>
-            <li>Stability, binding affinity, off-target evaluation</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h4>AI & Machine Learning Applications</h4>
-          <ul>
-            <li>Translate biological questions into AI-compatible formats</li>
-            <li>Modeling with scikit-learn, PyTorch, TensorFlow, Scanpy</li>
-            <li>Interpret model results for biomarker prioritization</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h4>Pipeline Development & Reproducibility</h4>
-          <ul>
-            <li>Standardized pipelines: AWS, Docker, Snakemake, Nextflow</li>
-            <li>Automate variant calling, RNA-seq/proteomics, single-cell analyses</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h4>Publication-Ready Visualization & Reporting</h4>
-          <ul>
-            <li>High-quality figures in R (ggplot2, Shiny) & Python (matplotlib, seaborn, plotly)</li>
-            <li>Produce reports with network diagrams, pathway maps, heatmaps, plots</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </header>
 
-    <div class="panel" id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:yzhang.feliscope@gmail.com">yzhang.feliscope@gmail.com</a></p>
-      <p>Address: P.O. Box 135, 234 Wood St, Woodville, MA 01784</p>
-    </div>
-  </div>
-</div>
+    <section id="hero" class="section-dark full-height">
+        <div class="container">
+            <h2><b>Feliscope</b>
+                <span class="tagline">– Translate Big Data into Biological Insights</span></h2>
+            <p>Provide comprehensive solutions from scientific questions to <b>therapeutic biomarkers</b>, <b>mechanisms</b>, and <b>scientific publications</b></p>
+        </div>
+    </section>
 
-<footer class="site-footer">
-  FELISCOPE LLC | P.O. Box 135, 234 Wood St, Woodville, MA 01784 | Email: <a href="mailto:yzhang.feliscope@gmail.com">yzhang.feliscope@gmail.com</a>
-</footer>
+    <section id="about" class="section-light full-height">
+        <div class="container">
+            <h3>About Us</h3>
+            <p>Feliscope is a <b>computational biology</b> and <b>AI consulting</b> company dedicated to translating big data into biological insights. We specialize in multi-omics data integration, machine learning modeling, and molecular simulation to uncover biomarkers, mechanisms, and therapeutic targets. Our team provides end-to-end analytical solutions—from raw data processing, statistical modeling, and pathway enrichment to AI-driven prediction, molecular docking, and structure-based optimization—delivering publication-ready results tailored to each client’s needs. By combining bioinformatics, data science, and computational chemistry, Feliscope empowers researchers, biotech startups, and pharmaceutical companies to accelerate discovery, enhance reproducibility, and make data-driven decisions with confidence.</p>
+    </section>
 
-<script src="js/script.js"></script>
+    <section id="founder" class="section-dark full-height">
+        <div class="container">
+            <h3>Yuhang Zhang, Ph.D.</h3>
+            <p class="role">Founder & Principal Scientist</p>
+            <p>As the Founder and Principal Scientist of Feliscope LLC, I specialize in transforming complex biological data into actionable insights that drive biomedical innovation. I hold a Ph.D. in Computational Cancer Immunology and completed postdoctoral training at Harvard, where I led integrative analyses of large clinical cohorts and multi-Omics datasets to identify biomarkers and disease mechanisms in complex diseases.</p>
+            <p>I have conducted over <b>80 independent machine learning and bioinformatics projects</b>, focusing on multi-omics integration, AI modeling, and molecular optimization for antibody, siRNA, and enzyme design. My expertise spans genetic association analyses (GWAS, eQTL/pQTL), deep learning for multi-omics integration, and translational biomarker discovery. With more than <b>110 peer-reviewed</b> publications, I combine technical depth with strategic insight to help research teams and biotech innovators accelerate discovery from data to impact.</p>
+        </div>
+    </section>
+
+    <section id="service" class="section-light full-height">
+        <div class="container service-container">
+            <h2>Our Comprehensive Services</h2>
+            <p class="service-intro">We offer specialized expertise across the entire spectrum of computational biology, from fundamental omics analysis to cutting-edge molecular design and machine learning applications.</p>
+            
+            <hr>
+
+            <div class="tab-navigation">
+                <button class="tab-link active" data-tab="omics">Omics Analysis</button>
+                <button class="tab-link" data-tab="molecular">Molecular Design</button>
+                <button class="tab-link" data-tab="ai">AI & ML Apps</button>
+                <button class="tab-link" data-tab="pipeline">Pipeline Dev.</button>
+                <button class="tab-link" data-tab="reporting">Reporting</button>
+            </div>
+
+            <div class="tab-content-wrapper">
+                
+                <div id="omics" class="tab-pane active">
+                    <h3>Omics analyses and functional interpretation</h3>
+                    <ul>
+                        <li>Best practice for Omics, including data preprocess, differential analyses, genetic variant calling, etc.</li>
+                        <li>Causal pathogenic variant/biomarker screening for research/clinical projects.</li>
+                        <li>Genetic regulatory mechanisms exploration using GWAS, QTL, mendelian randomization, etc.</li>
+                        <li>Multi-Omics integration approches: DIABLO, autoencoder integrating with deep learning structures.</li>
+                        <li>Functional analyses including pathway analyses, network anlayses, etc.</li>
+                    </ul>
+                </div>
+
+                <div id="molecular" class="tab-pane">
+                    <h3>Molecular design and optimization</h3>
+                    <ul>
+                        <li>Design and optimize antibodies, siRNAs, and ASOs using sequence and structural approaches.</li>
+                        <li>Molecular docking and interaction simulations (AutoDock Vina, PyMOL, etc.).</li>
+                        <li>Evaluate stability, binding affinity, and off-target effects.</li>
+                    </ul>
+                </div>
+
+                <div id="ai" class="tab-pane">
+                    <h3>AI & Machine Learning Applications</h3>
+                    <ul>
+                        <li>Translate biological questions into AI-compatible formats.</li>
+                        <li>Model establishment and optimization following common structures scikit-learn, PyTorch, TensorFlow, Scanpy and result interpretation.</li>
+                    </ul>
+                </div>
+
+                <div id="pipeline" class="tab-pane">
+                    <h3>Pipeline Development & Reproducibility</h3>
+                    <ul>
+                        <li>Standardized computational pipelines (AWS, Docker, Snakemake, Nextflow, etc.).</li>
+                        <li>Automate workflows for variant calling, RNA-seq/proteomics, single-cell analysis, etc.</li>
+                    </ul>
+                </div>
+
+                <div id="reporting" class="tab-pane">
+                    <h3>Publication-Ready Visualization & Reporting</h3>
+                    <ul>
+                        <li>High-quality figures using R (ggplot2, Shiny, etc.) and Python (matplotlib, seaborn, plotly, etc.).</li>
+                        <li>Produce reports including network diagrams, pathway maps, and heatmaps.</li>
+                    </ul>
+                </div>
+                
+            </div> </div>
+    </section>
+
+    <section id="contact" class="section-dark full-height">
+        <div class="container">
+            <h3>Contact Feliscope</h3>
+            <p>We are ready to discuss your next breakthrough project. Get in touch to see how we can translate your data into valuable biological insights.</p>
+            <div class="contact-details">
+                <p>📧 Email: <a href="mailto:yzhang.feliscope@gmail.com">yzhang.feliscope@gmail.com</a></p>
+                <p>🏢 Address: Pittsfield, MA, USA</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

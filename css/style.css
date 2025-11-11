@@ -1,108 +1,253 @@
-/* Reset & base */
-body { margin:0; font-family:'Inter', sans-serif; background:#fff9f5; color:#222; line-height:1.8; }
-p, li { margin-bottom:1.3rem; font-size:1.1rem; }
-
-/* Header */
-.site-header { position:sticky; top:0; background: linear-gradient(90deg,#ff7f50,#ff9055); color:white; padding:16px 28px;}
-.header-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:14px;}
-.brand { font-weight:700; font-size:1.25rem; }
-.tag { opacity:0.95; font-size:1rem; }
-
-/* Home Page */
-.page { display:none; min-height:calc(100vh - 70px); }
-.page.active { display:flex; align-items:center; justify-content:center; text-align:center; padding:50px; }
-.home-inner { max-width:1000px; }
-.home-inner h1 { font-size:3.5rem; margin:0; color:#e75b22; }
-
-/* Home page grid menu */
-.grid-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: nowrap; /* ensure all buttons in single row */
-  margin-top: 50px;
-}
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Basic Reset and Typography */
+:root {
+    /* 🎨 COOL/SCIENTIFIC COLOR PALETTE */
+    --primary-color: #00bcd4; /* Cyan/Aqua (Accent) */
+    --secondary-color: #00838f; /* Dark Cyan (Heading Accent) */
+    --light-bg: #f0f8ff; /* Very Light Blue/White (Cool Light Background) */
+    --dark-bg: #1c313a; /* Deep Slate Blue (Dark Background/Nav) */
+    --text-light: #fff;
+    --text-dark: #333;
+    --navbar-height: 80px;
 }
 
-/* Icon updated: no circular background */
-.menu-icon {
-  width:64px;
-  height:64px;
-  border-radius: 0;        /* remove circle */
-  background: transparent;  /* no background */
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:12px;
-  padding:0;
-}
-.menu-icon img {
-  width:48px;   /* slightly larger icon */
-  height:48px;
-  object-fit:contain;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Button rectangle */
-.menu-btn {
-  width:220px;       /* width */
-  height:100px;      /* height to match 2.2:1 ratio */
-  border: 2px solid #e75b22;
-  border-radius: 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.2rem;
-  color:#e75b22;
-  background:transparent;
-  cursor:pointer;
-  transition:0.2s;
-}
-.menu-btn:hover {
-  background: rgba(231,91,34,0.1);
-  transform:translateY(-4px);
+/* 🛑 GLOBAL UPDATES: Line Spacing and Base Font Size 🛑 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5; 
+    color: var(--text-dark);
+    min-height: 100vh;
+    font-size: 20px; /* Base content size set to 20px */
 }
 
-/* App container */
-.app-container { display:none; min-height:calc(100vh-70px); display:flex; }
+/* 🛑 CRITICAL: SCROLL SNAP 🛑 */
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
 
-/* Sidebar */
-.sidebar { width:240px; background: linear-gradient(180deg,#ff7f50,#ff9966); color:white; padding:36px 20px; flex-shrink:0; position:sticky; top:70px; height:calc(100vh-70px); }
-.sidebar h2 { margin:0 0 10px; font-size:1.2rem; }
-.sidebar ul { list-style:none; padding:0; margin:12px 0 0; }
-.sidebar li { margin-bottom:14px; }
-.sidebar a { color:white; text-decoration:none; font-weight:600; padding:6px 8px; display:inline-block; border-radius:8px; }
-.sidebar a:hover { background: rgba(255,255,255,0.06); transform: translateX(6px); }
-.sidebar .return-btn { width:100%; display:inline-block; text-align:center; margin-top:20px; border-radius:12px; padding:8px 0; font-size:1.1rem; border:2px solid #e75b22; color:#e75b22; background:transparent; transition: transform 0.2s, background 0.3s; }
-.sidebar .return-btn:hover { transform:translateX(6px); background: rgba(231,91,34,0.08); }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
 
-/* Content panels */
-.content { flex:1; padding:60px 80px; overflow:auto; background:#fffaf5; min-height:calc(100vh-70px); }
-.panel { display:none; background:#fff6ee; padding:36px; border-radius:14px; box-shadow:0 16px 48px rgba(230,80,40,0.08); margin-bottom:32px; transition: transform .35s, opacity .35s; }
-.panel.active { display:block; opacity:1; transform:translateY(0); }
-.panel h2 { margin-top:0; color:#e75b22; font-size:2rem; }
-.panel h3 { margin-top:8px; color:#e7682a; font-size:1.3rem; }
+/* --- 1. Top Navigation --- */
+#navbar {
+    background: var(--dark-bg);
+    color: var(--text-light);
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: var(--navbar-height); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: auto;
+}
 
-/* Services */
-.service-grid { display:flex; flex-direction:column; gap:32px; margin-top:20px; }
-.service-card { background:#fffaf6; padding:36px; border-radius:14px; box-shadow:0 12px 32px rgba(0,0,0,0.08); width:100%; }
-.service-card h4 { font-size:1.6rem; margin-bottom:16px;}
-.service-card ul li { font-size:1.2rem; margin-bottom:1.3rem; }
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
 
-/* Footer */
-.site-footer { background:#fdf1eb; text-align:center; padding:20px 16px; font-size:0.95rem; color:#555; border-top:1px solid #e5c9b2; margin-top:40px; }
-.site-footer a { color:#e75b22; text-decoration:none; font-weight:600; }
-.site-footer a:hover { text-decoration:underline; }
+#navbar .logo { 
+    font-size: 1.8rem; 
+    color: var(--primary-color); 
+}
+#navbar nav { flex-grow: 1; text-align: right; }
+#navbar a { color: var(--text-light); text-decoration: none; padding: 0 15px; transition: color 0.3s; font-weight: bold; }
+#navbar a:hover { color: var(--primary-color); }
 
-/* Responsive */
-@media(max-width:980px){
-  .sidebar{display:none;}
-  .app-container{flex-direction:column;}
-  .content{padding:32px 24px;}
-  .grid-menu{flex-direction:column;gap:20px;}
-  .menu-btn{width:70%;height:100px;font-size:1.2rem;padding:28px 12px;}
+/* --- 2. Sections --- */
+section {
+    padding: 80px 0;
+    min-height: 100vh; 
+    padding-top: calc(20px + var(--navbar-height)); 
+    scroll-snap-align: start; 
+    scroll-snap-stop: always;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.section-light { 
+    background: var(--light-bg); 
+    color: var(--text-dark); 
+}
+.section-dark { 
+    background: var(--dark-bg); 
+    color: var(--text-light); 
+}
+
+/* 🛑 PARAGRAPH DISTANCE CONTROL 🛑 */
+p {
+    margin-bottom: 20px; /* Distance below all paragraphs is 20px */
+}
+
+/* --- Hero Section: Gatekeeper Logic & Typography --- */
+#hero {
+    /* 🛑 Disable scrolling events on the hero content to force nav use */
+    pointer-events: none;
+    padding: 150px 0;
+    text-align: center;
+    background-color: var(--dark-bg);
+}
+
+#hero h2 { 
+    color: var(--text-light); 
+    font-size: 3.5rem; 
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+#hero h2 .tagline {
+    font-size: 0.5em; 
+    font-weight: normal;
+    display: block; 
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+#hero p { 
+    font-size: 20px; /* Same as body base size */
+    color: #ccc; 
+    max-width: 800px;
+    margin: 20px auto 0;
+    margin-bottom: 20px;
+}
+
+
+/* --- Consolidated Service Section (Tabbed Layout) --- */
+#service .service-container {
+    /* Allows inner scrolling if content exceeds viewport height */
+    max-height: calc(100vh - var(--navbar-height) - 100px); 
+    overflow-y: auto; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-intro { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-size: 20px; 
+}
+
+/* Tab Navigation Styling */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tab-link {
+    background-color: #e0f7fa; 
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 5px;
+    /* UPDATED: Font Size for Button Words */
+    font-size: 20px; 
+}
+
+.tab-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.tab-link.active {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Tab Content Styling (Unchanged) */
+.tab-content-wrapper {
+    background: #ffffff; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.tab-pane {
+    display: none; 
+}
+
+.tab-pane.active {
+    display: block; 
+}
+
+
+/* --- General Typography & Lists --- */
+h2 {
+    font-size: 32px; /* UPDATED: Main section heading size */
+    margin-bottom: 20px; 
+}
+h3 { 
+    font-size: 24px; /* UPDATED: Sub-section title size */
+    color: var(--secondary-color); 
+    margin-bottom: 20px;
+}
+section ul { list-style: none; padding-left: 20px; }
+section ul li { 
+    font-size: 20px; /* List item font size inherits from body (20px) */
+    /* Bullet points match the primary color */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="%2300bcd4"/></svg>') no-repeat left center;
+    background-size: 8px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+.section-dark ul li { 
+    /* White bullets on dark background */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="%23ffffff"/></svg>') no-repeat left center; 
+    background-size: 8px; 
+}
+.role { 
+    font-style: italic; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    color: #a5b0b5; 
+    font-size: 20px; 
+}
+
+/* --- Contact Details (Content inherits 20px body size) --- */
+.contact-details { 
+    margin-top: 30px; 
+    padding: 20px; 
+    border: 1px dashed var(--primary-color); 
+    border-radius: 5px; 
+    display: inline-block; 
+    color: var(--text-light); 
+}
+.contact-details p { 
+    margin-bottom: 10px; /* Set lower for contact info */
+    font-size: 20px; 
+}
+.contact-details a { 
+    color: var(--primary-color); 
+    text-decoration: none; 
+}
+.contact-details a:hover { text-decoration: underline; }
+
+/* Responsiveness (Basic - Unchanged) */
+@media (max-width: 768px) {
+    #navbar .container { flex-direction: column; text-align: center; }
+    #navbar nav { margin-top: 10px; }
+    #navbar a { padding: 5px 10px; display: inline-block; }
 }
