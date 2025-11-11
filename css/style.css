@@ -161,7 +161,7 @@ p {
     font-weight: bold;
     margin: 5px;
     border-radius: 5px;
-    /* UPDATED: Font Size for Button Words */
+    /* Font Size for Button Words */
     font-size: 20px; 
 }
 
@@ -196,11 +196,11 @@ p {
 
 /* --- General Typography & Lists --- */
 h2 {
-    font-size: 32px; /* UPDATED: Main section heading size */
+    font-size: 32px; /* Main section heading size */
     margin-bottom: 20px; 
 }
 h3 { 
-    font-size: 24px; /* UPDATED: Sub-section title size */
+    font-size: 24px; /* Sub-section title size */
     color: var(--secondary-color); 
     margin-bottom: 20px;
 }
@@ -245,9 +245,50 @@ section ul li {
 }
 .contact-details a:hover { text-decoration: underline; }
 
-/* Responsiveness (Basic - Unchanged) */
+/* 📱 Responsiveness (Mobile Optimization) 📱 */
 @media (max-width: 768px) {
-    #navbar .container { flex-direction: column; text-align: center; }
-    #navbar nav { margin-top: 10px; }
-    #navbar a { padding: 5px 10px; display: inline-block; }
+    /* 1. Stack Logo and Nav on Separate Lines */
+    #navbar .container { 
+        flex-direction: column; /* Stacks children vertically */
+        text-align: center; 
+        padding-top: 5px; 
+        padding-bottom: 5px; 
+    }
+    
+    /* 2. Allow Navbar to expand to fit content */
+    #navbar {
+        height: auto; /* Height adapts to the stacked content */
+    }
+
+    /* 3. Adjust Nav placement */
+    #navbar nav { 
+        margin-top: 5px; 
+        flex-grow: initial;
+    }
+
+    /* 4. Display links inline with adjusted padding and font size for phone screen */
+    #navbar a { 
+        padding: 5px 8px; 
+        display: inline-block; 
+        font-size: 0.9em; /* Slightly smaller link text */
+    }
+
+    /* 5. Ensure sections start below the now taller fixed nav bar */
+    section {
+        /* This ensures content doesn't hide behind the expanded navbar */
+        padding-top: calc(100px); 
+    }
+    
+    /* 6. Adjust large typography for better phone viewing */
+    h2 {
+        font-size: 28px; /* Slightly smaller main headings on mobile */
+    }
+
+    h3 {
+        font-size: 22px; /* Slightly smaller sub-headings on mobile */
+    }
+
+    body {
+        font-size: 18px; /* Base content slightly smaller for tighter fit */
+    }
 }
